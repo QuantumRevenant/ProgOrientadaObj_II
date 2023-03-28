@@ -1,0 +1,96 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Ejercicio2 {
+    private static JTextField numElementosField; private static JTextField elementosField; private static JTextArea resultadosArea;
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 400);
+
+        JPanel panel = new JPanel();
+        frame.add(panel);
+        placeComponents(panel);
+
+        frame.setVisible(true);
+    }
+
+    private static void placeComponents(JPanel panel) {
+        panel.setLayout(null);
+
+        JLabel numElementosLabel = new JLabel("Número de elementos:");
+        numElementosLabel.setBounds(10, 10, 160, 25);
+        panel.add(numElementosLabel);
+
+        numElementosField = new JTextField(20);
+        numElementosField.setBounds(180, 10, 160, 25);
+        panel.add(numElementosField);
+
+        JLabel elementosLabel = new JLabel("Elementos (separados por comas):");
+        elementosLabel.setBounds(10, 40, 160, 25);
+        panel.add(elementosLabel);
+
+        elementosField = new JTextField(20);
+        elementosField.setBounds(180, 40, 160, 25);
+        panel.add(elementosField);
+
+        JButton calcularButton = new JButton("Calcular");
+        calcularButton.setBounds(10, 80, 80, 25);
+        calcularButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String[] elementosStr = elementosField.getText().split(",");
+                int n = Integer.parseInt(numElementosField.getText());
+                int[] array = new int[n];
+                for (int i = 0; i < n; i++) {
+                    array[i] = Integer.parseInt(elementosStr[i]);
+                }
+                String resultados = "La suma de todos los elementos es: " + suma(array) + "\n";
+                resultados += "El promedio de todos los elementos es: " + promedio(array) + "\n";
+                resultados += "La suma de todos los elementos pares es: " + sumaPares(array) + "\n";
+                resultados += "La suma de todos los elementos impares es: " + sumaImpares(array) + "\n";
+                resultadosArea.setText(resultados);
+            }
+        });
+        panel.add(calcularButton);
+
+        resultadosArea = new JTextArea();
+        resultadosArea.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(resultadosArea);
+        scrollPane.setBounds(10, 120, 360, 200);
+        panel.add(scrollPane);
+    }
+
+    public static int suma(int[] array) {
+        int suma = 0;
+        for (int j : array) {
+            suma += j;
+        }
+        return suma;
+    }
+
+    public static double promedio(int[] array) {
+        return (double) suma(array) / array.length;
+    }
+
+    public static int sumaPares(int[] array) {
+        int suma = 0;
+        for (int j : array) {
+            if (j % 2 == 0) {
+                suma += j;
+            }
+        }
+        return suma;
+    }
+
+    public static int sumaImpares(int[] array) {
+        int suma = 0;
+        for (int j : array) {
+            if (j % 2 != 0) {
+                suma += j;
+            }
+        }
+        return suma;
+    }
+}

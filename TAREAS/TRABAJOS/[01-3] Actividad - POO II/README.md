@@ -10,7 +10,7 @@ parámetros para desarrollar el ejercicio.
 
 EJERCICIO 2:
 
-RESUELTO POR Andre **[NO SUBIDO]**
+RESUELTO POR Andre *[SUBIDO]*
 
 Ingresar N elementos a un arreglo unidimensional y calcular el factorial de todos
 los elementos ingresados al arreglo. Usar funciones y paso de parámetros para
