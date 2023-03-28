@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 public class EJERCICIO_4 {
 
-    private ArrayList<ArrayList<String>> db = new ArrayList();
+    private ArrayList<ArrayList<String>> db = new ArrayList<>();
 
     public EJERCICIO_4() {
     }
@@ -24,13 +24,23 @@ public class EJERCICIO_4 {
     public void add(ArrayList<String> x) {
         db.add(x);
     }
-
+    
     public String get(int x, int y) {
         return db.get(x).get(y);
     }
 
     public int getSize() {
         return db.size();
+    }
+    public void printData()
+    {
+        for(int i=0;i<db.size();i++)
+        {
+            for(int j=0;j<3;j++)
+            {
+                System.out.println(db.get(i).get(j)+"- pos "+j+" "+i+"\n");
+            }
+        }
     }
     public String getCodigo(double x)
     {

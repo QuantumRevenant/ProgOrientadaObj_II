@@ -22,7 +22,25 @@ public class Ejercicio4_Form extends javax.swing.JFrame {
         initComponents();
         populateTable();
     }
-
+    
+    private void demoFull()
+    {
+        for(int i=0;i<40;i++)
+        {
+            ArrayList<String> answ=new ArrayList<>();
+            String codigo="Cod0"+(i+1);
+            String nombre="Test"+(i+1);
+            double nota=(double)(i%20)+1;
+            answ.add(codigo); 
+            answ.add(nombre);
+            answ.add(String.valueOf(nota));
+            ope.add(answ);
+        }
+        TxtResultado.setText("La Mayor Nota es " + ope.getNotaMaxima() + ", la obtuvo " + ope.getNombre(ope.getNotaMaxima()) + " (" + ope.getCodigo(ope.getNotaMaxima()) + ")"
+                + "\n\nLa Menor Nota: " + ope.getNotaMinima() + ", la obtuvo " + ope.getNombre(ope.getNotaMinima()) + " (" + ope.getCodigo(ope.getNotaMinima()) + ")"
+                + "\n\nEl Promedio de las " + ope.getSize() + " notas es " + ope.getPromedio());
+    }
+    
     private void populateTable() {
         Object Titles[] = {"Código", "Nombre", "Nota"};
         Object Data[] = new Object[3];
@@ -66,7 +84,7 @@ public class Ejercicio4_Form extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("NOTAS");
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(null));
 
         TxtResultado.setColumns(20);
         TxtResultado.setRows(5);
@@ -121,12 +139,12 @@ public class Ejercicio4_Form extends javax.swing.JFrame {
                                     .addComponent(jLabel4)
                                     .addComponent(jLabel5))
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                            .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
                             .addComponent(TxtNota)
                             .addComponent(TxtCodigo)
                             .addComponent(TxtNombre, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -169,7 +187,7 @@ public class Ejercicio4_Form extends javax.swing.JFrame {
         TxtNombre.setText("");
         TxtNota.setText("");
 
-        ArrayList<String> newDb = new ArrayList();
+        ArrayList<String> newDb = new ArrayList<>();
 
         newDb.add(codigo);
         newDb.add(nombre);
