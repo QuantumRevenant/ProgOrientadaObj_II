@@ -1,16 +1,12 @@
-
-
 EJERCICIO 1:
 
-RESUELTO POR ylemNadia **[NO SUBIDO]**
+RESUELTO POR ylemNadia *[SUBIDO]*
 
 Ingresar N elementos a un arreglo unidimensional y calcular las siguientes
 operaciones: sumar todos los elementos, promedio de todos los elementos, suma
 todos los elementos pares e impares. Tener en cuenta, realizar una pregunta en
 cada iteración para continuar o cerrar el ejercicio. Usar funciones y paso de
 parámetros para desarrollar el ejercicio.
-
-
 
 EJERCICIO 2:
 
@@ -20,8 +16,6 @@ Ingresar N elementos a un arreglo unidimensional y calcular el factorial de todo
 los elementos ingresados al arreglo. Usar funciones y paso de parámetros para
 desarrollar el ejercicio.
 
-
-
 EJERCICIO 3:
 
 RESUELTO POR D-A-B-O *[SUBIDO]*
@@ -29,7 +23,6 @@ RESUELTO POR D-A-B-O *[SUBIDO]*
 Ingresar N elementos a un arreglo unidimensional y mostrar los divisores de todos
 los números ingresados. Usar funciones y paso de parámetros para desarrollar el
 ejercicio.
-
 
 EJERCICIO 4:
 
