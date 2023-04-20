@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "CLASSWORK",
         "CLASS",
-        "HOMEWORK"
+        "HOMEWORK",
+        "EXAM"
     ]
 }
